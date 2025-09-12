@@ -1,1 +1,3 @@
-# kotlin-2025a
+# Kotlin-2025a
+
+This remote repository manages code and materials related to the Mobile Programming course for the Fall 2025 semester.
