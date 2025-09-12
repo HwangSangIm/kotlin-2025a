@@ -37,7 +37,7 @@ private fun week02Functions(){
 //
 //    fun greet(name: String) = "Hello, $name!"
 //
-//    println(greet(name = "Android developer"))
+//    println(greet("Android developer"))
 
     println("== Kotlin Functions ==")
 
@@ -51,7 +51,7 @@ private fun week02Functions(){
         println("My name is $name and I am $age years old")
     }
 
-    println(greet(name = "Kotlin"))
+    println(greet("Kotlin"))
     println("Sum: ${add(5,-71)}")
     introduce("Kim",7)
     introduce("Park")
