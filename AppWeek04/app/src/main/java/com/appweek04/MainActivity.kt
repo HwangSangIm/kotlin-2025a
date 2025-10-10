@@ -13,9 +13,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val buttonGreet = findViewById<Button>(R.id.buttonGreet)
+        val buttonCounter = findViewById<Button>(R.id.buttonCounter)
 
         buttonGreet.setOnClickListener {
             startActivity(Intent(this, GreetingActivity::class.java))
+        }
+
+        buttonCounter.setOnClickListener {
+            startActivity(Intent(this, CounterActivity::class.java))
         }
     }
 }
