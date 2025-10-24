@@ -226,7 +226,6 @@ class MainActivity : AppCompatActivity() {
         editTextPrice.text.clear()
         editTextQuantity.text.clear()
 
-
     }
 
     private fun clearAll() {
