@@ -6,7 +6,7 @@ import java.util.UUID
 data class Student(
     val name: String,
     val id: String = UUID.randomUUID().toString(),
-    val department: String = "computer Science"
+    val department: String = "computer Science",
     val grade: String = "2nd Year",
     val email: String = "",
     val addedDate : Date = Date()
