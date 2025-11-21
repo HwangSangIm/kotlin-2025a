@@ -23,11 +23,16 @@ class StudentAdapter(
                 textViewEmail.text = student.email
 
                 root.setOnClickListener {
-                    onItemClick(student, adapterPosition)
+                    val position = bindingAdapterPosition
+                    if (position != RecyclerView.NO_POSITION) { // 안전성 확보
+                        onItemClick(student, position)
+                    }
                 }
-
                 root.setOnLongClickListener {
-                    onItemLongClick(adapterPosition)
+                    val position = bindingAdapterPosition
+                    if (position != RecyclerView.NO_POSITION) { // 안전성 확보
+                        onItemLongClick(position)
+                    }
                     true
                 }
             }
