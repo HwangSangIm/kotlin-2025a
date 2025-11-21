@@ -1,14 +1,16 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+
+    id("org.jetbrains.kotlin.kapt")
 }
 
 android {
-    namespace = "com.appweek11"
+    namespace = "com.appweek10"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.appweek11"
+        applicationId = "com.appweek10"
         minSdk = 27
         targetSdk = 36
         versionCode = 1
@@ -33,6 +35,9 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -42,6 +47,19 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+
+    // recyclerview
+    implementation("androidx.recyclerview:recyclerview:1.4.0")
+
+    // Room database
+    val roomVersion = "2.8.3"
+    implementation("androidx.room:room-runtime:$roomVersion")
+    implementation("androidx.room:room-ktx:$roomVersion")
+    kapt("androidx.room:room-compiler:$roomVersion")
+
+    // Coroutine
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
